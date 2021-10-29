@@ -1,0 +1,338 @@
+*{  
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    /*fondo */
+    background-color: rgba(80, 150, 80, .4);
+    background: url("imagenes/Tportlands4.jpg"); /*fondo, foto de la ciudad*/    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Roboto Slab", "Merriweather", "Times New Roman", Times, sans-serif;
+}
+
+body{
+    /*background*/
+    background: url("imagenes/white.png"); /*fondo blanco para opacar el fondo de ciudad del html*/
+    background-color: rgba(80, 150, 80, .2); /*mezcla para que el fondo no quede enteramente blanco, apenitas verde*/
+    background-blend-mode:soft-light;
+    width: 1200px;
+    margin: auto;
+}
+
+header, footer{
+    display: flex;
+    margin-top: 10px;
+    text-align: center;
+    background-color: rgba(80, 150, 80, .8);    
+    margin-bottom: 20px;
+}
+
+header img{
+    margin-left: 200px;
+    vertical-align: middle;
+}
+
+footer img {
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+footer {
+    justify-content: center;
+}
+
+header h1{
+    flex: 3;
+    margin-top: 75px;
+    margin-right: 200px;
+    font-size: 50px;
+}
+
+h1, h2, p, figcaption, nav#miMenu ul li a, input[type="submit"], label{ 
+    color: darkblue;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 33.200px;
+    /*border: 1px solid darkblue;*/
+}
+
+p{
+    margin: 16px;
+}
+
+table {    
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+table th, table td {
+    border: 1px solid skyblue;
+    padding: 8px 1px 8px 1px;
+    text-align: center;
+}
+
+tr:nth-child(2n){
+	background-color: rgb(135, 206, 235);
+}
+
+tr:nth-child(2n+1){
+	background-color: rgba(135, 206, 235, 0.6);
+}
+
+::placeholder {
+    font-weight:bold;
+}
+
+input:required, textarea:required, select:required{
+	border:1px solid red;
+}
+input[type="text"]:valid, input[type="number"]:valid, textarea:valid, select:valid{
+	border:1px solid green;
+    background-color: skyblue;
+}
+
+input:focus, textarea:focus, select:focus{
+	background-color:lightgrey;
+}
+
+input[type="submit"]{
+    width: 100px;
+	height: 50px;
+	margin: 10px 0 10px 0;
+	background-color: lightgrey;
+    box-shadow: 2px 6px #999;
+    border-radius: 10px;
+}
+
+input[type="submit"]:hover {
+	background-color: rgba(0, 221, 85, 0.5);	
+    cursor:pointer;
+}
+
+input[type="submit"]:active {
+	background-color: rgba(0, 221, 85, 0.7);;	
+    box-shadow: 1px 3px #666;
+    transform: translateY(4px);
+}
+
+section {
+    width: 1100px;
+    margin: auto;
+}
+
+section h1 {
+    padding-top: 32px; /*Para que el menú no se coma los títulos, y para separar un poco más las secciones de paso*/
+    font-size: 40px;
+    text-align: center;
+}
+
+nav#miMenu{
+    background-color: rgba(80, 150, 80, .8);
+    text-align: center;
+    height: 30px;
+    top: 10px;
+    position: sticky;
+    z-index: 101;
+}
+
+nav#miMenu ul{
+    display: flex;
+    list-style-type: none;
+}
+
+nav#miMenu ul li {    
+    flex: 1;
+    /*display: inline-block;*/ /*display viejo*/
+    width: 250px;
+}
+
+nav#miMenu ul li a{
+    text-decoration: none;
+    background-color: skyblue;
+    border-left: 10px transparent;
+    height: 1px;
+    line-height: 1px;
+    font-size:150%
+}
+
+nav#miMenu ul li a:hover{
+    border-left: 10px solid darkblue;
+    font-size: 190%;
+}
+
+section#idCiudad {
+    background-image: url("imagenes/TPortlands2-resized.jpg");
+    background-attachment: fixed;
+    background-position: bottom;
+    min-height: 200px;
+}
+
+section#idCiudad p {
+    width: 900px;
+    margin: auto;
+    text-align: center;
+    background-color: RGBA(255, 255, 255, 0.85);
+}
+
+section#idCiudad h1 {
+    padding: 0px;
+    margin-left: 0px;
+    width: 12%;
+    text-align: left;
+    background-color: RGBA(255, 255, 255, 0.7);
+}
+
+section#idCiudad p {
+    text-align: center;
+}
+
+section#idLugares div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section#idLugares article {    
+    flex: 1;
+    margin-top: 15px;
+}
+
+section#idLugares div figcaption {
+    width: 260px;
+    margin-left: 7px;
+    text-align:left;
+}
+
+section#idLugares figure, section#idGaleria figure {
+    position: relative;
+    text-align: center;
+}
+
+section div figure img, section div figure img {    
+    height: 150px;
+    width: 270px;
+    transition: 0.2s transform;
+    position: relative;
+    z-index: 99;
+}
+
+section#idLugares figure img:hover, section#idGaleria figure img:hover {
+    position: relative;
+    z-index: 100;
+    transform: scale(2.4);
+}
+
+section#idGaleria {
+    scroll-margin-top: 155px; /*para que se vean bien las imágenes, el link nos llevará más arriba del anclaje real, sin tener que añadir padding / margin extra*/
+}
+
+section#idGaleria div {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+}
+
+section#idGaleria div figure:nth-of-type(2){
+	grid-row: span 2;
+}
+
+section#idGaleria div figure:nth-of-type(6){
+	grid-column: span 2;
+}
+
+.imgGalAncha {
+    height: 150px;
+    width: 545px;
+}
+
+.imgGalLarga {
+    height: 303px;
+    width: 270px;
+}
+
+section#idRecomendaciones div{
+    display: flex;
+}
+
+section#idRecomendaciones div article:nth-child(2){
+    margin: 0 40px 0 40px;
+    flex: 1.5;
+}
+
+section#idRecomendaciones div article:nth-child(3){
+    flex: 1.5;
+}
+section#idRecomendaciones ul {
+    margin: 0 20px 10px 20px;
+}
+
+section#idRecomendaciones div p{
+    margin: 0 0 20px 0px;
+}
+
+section#idRecomendaciones img {
+    height: 300px;
+}
+
+#colorRegistro{
+    width: 1200px;
+    height: 550px;
+    background-color: rgba(80, 150, 80, .3);;
+}
+
+section#idRegistro {
+    width: 680px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+#contenedorRegistro {
+    margin: 20px 0px 20px 0px;
+    display: grid;
+    text-align: left;
+    align-self:center;
+}
+
+section#idRegistro div input[type="text"], section#idRegistro div input[type="number"], section#idRegistro div select, section#idRegistro div textarea, section#idRegistro div p {
+    margin: 5px 10px 15px 10px;
+    height: 30px;
+}
+
+section#idRegistro div label{
+    margin: 0px 10px 0px 10px;
+}
+
+section#idRegistro div textarea{
+    margin-bottom: 15px;
+    height: 90px;
+}
+
+#cajaMotivosYDias {
+    grid-template-columns: 162px auto 163px auto;
+}
+
+#cajaMotivosYDias input{
+    margin: 0px 5px 0px 5px;
+    width: 70px;
+}
+
+textarea+label{ /*seleccionamos el label "Viajará *" */
+    padding-top:15px;
+}
+
+#cajaAcompañantesYEnviar div {
+    grid-template-columns: 35px 35px 90px 20px auto;
+}
+
+div#cajaAcompañantesYEnviar input[type="submit"]
+{
+    margin-left: 368px;
+    height: 30px;
+}
+
+#cajaAcompañantesYEnviar input[type="radio"]{
+    vertical-align: middle;
+    margin: 0px;
+}
