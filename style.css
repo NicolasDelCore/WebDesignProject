@@ -99,7 +99,7 @@ input:focus, textarea:focus, select:focus{
 	background-color:lightgrey;
 }
 
-input[type="submit"]{
+input[type="submit"],input[type="button"]{
     width: 100px;
 	height: 50px;
 	margin: 10px 0 10px 0;
@@ -108,12 +108,12 @@ input[type="submit"]{
     border-radius: 10px;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover, input[type="button"]:hover  {
 	background-color: rgba(0, 221, 85, 0.5);	
     cursor:pointer;
 }
 
-input[type="submit"]:active {
+input[type="submit"]:active, input[type="button"]:active {
 	background-color: rgba(0, 221, 85, 0.7);;	
     box-shadow: 1px 3px #666;
     transform: translateY(4px);
